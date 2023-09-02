@@ -51,16 +51,25 @@
 
                         <!-- creo div cin id para acceder con vue3 -->
                         <div id="qpp">
-                            <h2>prueba vue 3 cdn</h2>
+                            <h2>Prueba Vue 3 CDN</h2>
                             <h3>{{ title }}</h3>
                             <br>
+                            <h4>Nombres:</h4>
                             <ul>
-                                <li v-for="(name,index) in name" :key="index">
+                                <li v-for="(name, index) in names" :key="index">
                                     {{ name }}
                                 </li>
                             </ul>
-
+                            <h4>Personas:</h4>
+                            <ul>
+                                <li v-for="(person, index) in people"
+                                    :key="index">
+                                    Nombre: {{ person.name }}, Edad: {{
+                                    person.age }}
+                                </li>
+                            </ul>
                         </div>
+
                         <h2>About this page</h2>
                         <p class="lead">This is a great place to talk about your
                             webpage. This template is purposefully unstyled so
@@ -123,21 +132,30 @@
 
             <script>
 
-            const TestApp = {
-                data(){
-                    return {
-                        title:"helow from vuejs 3",
-                        name:[
-                            'Roger',
-                            'Maria',
-                            'Jhon',
-                            'Mary',
-                        ]
-                    }
-                }
-            }
+const TestApp = {
+    data() {
+        return {
+            title: "Hello from Vue.js 3",
+            names: [
+                'Roger',
+                'Maria',
+                'John',
+                'Mary'
+            ],
+            people: [
+                { name: 'Roger', age: 30 },
+                { name: 'Maria', age: 25 },
+                { name: 'John', age: 35 },
+                { name: 'Mary', age: 28 }
+            ]
+        }
+    }
+}
 
-            Vue.createApp(TestApp).mount("#qpp")
+Vue.createApp(TestApp).mount("#qpp")
+
+
+            
 
         </script>
             <!-- Bootstrap core JS-->
