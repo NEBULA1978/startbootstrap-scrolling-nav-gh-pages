@@ -12,6 +12,7 @@
     <link href="css/styles.css" rel="stylesheet" />
 </head>
 <body id="page-top">
+ <div id="qpp">
 
 <!-- Navigation-->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
@@ -42,7 +43,7 @@
     <div class="container px-4">
         <div class="row gx-4 justify-content-center">
             <div class="col-lg-8">
-                <div id="qpp">
+               
                     <h2 :style="{ color: titleColor }">Prueba Vue 3 CDN</h2>
                     <h3 :style="{ color: messageColor }">{{ title }}</h3>
                     <br>
@@ -58,7 +59,7 @@
                             Nombre: {{ person.name }}, Edad: {{ person.age }}
                         </li>
                     </ul>
-                </div>
+                
 
                 <h2>About this page</h2>
                 <p class="lead">This is a great place to talk about your webpage. This template is purposefully unstyled so you can use it as a boilerplate or starting point for your own landing page designs! This template features:</p>
@@ -137,5 +138,6 @@ app.mount("#qpp");
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 <!-- Core theme JS-->
 <script src="js/scripts.js"></script>
+</div>
 </body>
 </html>
