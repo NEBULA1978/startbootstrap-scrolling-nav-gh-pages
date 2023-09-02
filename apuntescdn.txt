@@ -5,6 +5,9 @@ dentro de html5:
 
                         <!-- creo div cin id para acceder con vue3 -->
                         <div id="qpp">
+
+                        Aqui ira php dentro e id=app
+
                             <h2>prueba vue 3 cdn</h2>
                             <h3>{{ title }}</h3>
                             <br>
