@@ -1,0 +1,47 @@
+dentro de html5:
+
+  <div class="row gx-4 justify-content-center">
+                    <div class="col-lg-8">
+
+                        <!-- creo div cin id para acceder con vue3 -->
+                        <div id="qpp">
+                            <h2>prueba vue 3 cdn</h2>
+                            <h3>{{ title }}</h3>
+                            <br>
+                            <ul>
+                                <li v-for="(name,index) in name" :key="index">
+                                    {{ name }}
+                                </li>
+                            </ul>
+
+                        </div>
+
+
+javascript cdn vue3:
+
+            </footer>
+
+            <!-- vue3  importo cdn-->
+            <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+            <script>
+
+            const TestApp = {
+                data(){
+                    return {
+                        title:"helow from vuejs 3",
+                        name:[
+                            'Roger',
+                            'Maria',
+                            'Jhon',
+                            'Mary',
+                        ]
+                    }
+                }
+            }
+
+            Vue.createApp(TestApp).mount("#qpp")
+
+        </script>
+
+añado en html5 vue3.
