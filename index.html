@@ -56,14 +56,16 @@
                             <br>
                             <h4>Nombres:</h4>
                             <ul>
-                                <li v-for="(name, index) in names" :key="index">
+                                <li v-for="(name, index) in names" :key="index"
+                                    :style="{ color: getColor(index) }">
                                     {{ name }}
                                 </li>
                             </ul>
                             <h4>Personas:</h4>
                             <ul>
                                 <li v-for="(person, index) in people"
-                                    :key="index">
+                                    :key="index"
+                                    :style="{ color: getColor(index) }">
                                     Nombre: {{ person.name }}, Edad: {{
                                     person.age }}
                                 </li>
@@ -147,12 +149,21 @@ const TestApp = {
                 { name: 'Maria', age: 25 },
                 { name: 'John', age: 35 },
                 { name: 'Mary', age: 28 }
-            ]
+            ],
+            colors: ['red', 'blue', 'green'] // Colores personalizados
+        }
+    },
+    methods: {
+        getColor(index) {
+            // Devuelve un color de la lista de colores basado en el índice
+            return this.colors[index % this.colors.length];
         }
     }
 }
 
 Vue.createApp(TestApp).mount("#qpp")
+
+
 
 
             
