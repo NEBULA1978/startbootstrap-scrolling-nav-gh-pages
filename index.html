@@ -50,27 +50,24 @@
                     <div class="col-lg-8">
 
                         <!-- creo div cin id para acceder con vue3 -->
-                        <div id="qpp">
-                            <h2>Prueba Vue 3 CDN</h2>
-                            <h3>{{ title }}</h3>
-                            <br>
-                            <h4>Nombres:</h4>
-                            <ul>
-                                <li v-for="(name, index) in names" :key="index"
-                                    :style="{ color: getColor(index) }">
-                                    {{ name }}
-                                </li>
-                            </ul>
-                            <h4>Personas:</h4>
-                            <ul>
-                                <li v-for="(person, index) in people"
-                                    :key="index"
-                                    :style="{ color: getColor(index) }">
-                                    Nombre: {{ person.name }}, Edad: {{
-                                    person.age }}
-                                </li>
-                            </ul>
-                        </div>
+<div id="qpp">
+    <h2 :style="{ color: titleColor }">Prueba Vue 3 CDN</h2>
+    <h3 :style="{ color: messageColor }">{{ title }}</h3>
+    <br>
+    <h4>Nombres:</h4>
+    <ul>
+        <li v-for="(name, index) in names" :key="index" :style="{ color: getColor(index) }">
+            {{ name }}
+        </li>
+    </ul>
+    <h4>Personas:</h4>
+    <ul>
+        <li v-for="(person, index) in people" :key="index" :style="{ color: getColor(index) }">
+            Nombre: {{ person.name }}, Edad: {{ person.age }}
+        </li>
+    </ul>
+</div>
+
 
                         <h2>About this page</h2>
                         <p class="lead">This is a great place to talk about your
@@ -133,7 +130,6 @@
             <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 
             <script>
-
 const TestApp = {
     data() {
         return {
@@ -150,6 +146,8 @@ const TestApp = {
                 { name: 'John', age: 35 },
                 { name: 'Mary', age: 28 }
             ],
+            titleColor: 'red', // Color para "Prueba Vue 3 CDN"
+            messageColor: 'blue', // Color para "Hello from Vue.js 3"
             colors: ['red', 'blue', 'green'] // Colores personalizados
         }
     },
@@ -162,7 +160,6 @@ const TestApp = {
 }
 
 Vue.createApp(TestApp).mount("#qpp")
-
 
 
 
